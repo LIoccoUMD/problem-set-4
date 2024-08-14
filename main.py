@@ -14,6 +14,8 @@ def main():
     ##  PART 1: ETL  ##
     # ETL the datasets into dataframes
     pred_universe, arrest_events, charge_counts, charge_counts_by_offense = part1.extract_transform()
+    felony_charge = part4.create_felony_df(arrest_events)
+    merged_df = part4.merge_felony(pred_universe,felony_charge)
     
     ##  PART 2: PLOT EXAMPLES  ##
     # Apply plot theme
@@ -30,16 +32,11 @@ def main():
     part3.color_code_chart(pred_universe)
     part3.plot_age_histogram(pred_universe)
     part3.age_histogram_with_bins(pred_universe)
-    # 3
-
-    # 4
 
     ##  PART 4: CATEGORICAL PLOTS  ##
-    # 1
-    
-    # 2
-
-    # 3
+    part4.plot_charge_and_felony_prediction(merged_df)
+    part4.plot_nonfelony_prediction(merged_df)
+    part4.repeated_plot(merged_df)
 
     ##  PART 5: SCATTERPLOTS  ##
     # 1
