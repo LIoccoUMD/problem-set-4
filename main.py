@@ -27,22 +27,20 @@ def main():
     part2.histograms(pred_universe)
     part2.scatterplot(pred_universe)
 
-    ##  PART 3: BAR PLOTS AND HISTOGRAMS  ##
+    # ##  PART 3: BAR PLOTS AND HISTOGRAMS  ##
     part3.fta_bar_plot(pred_universe)
     part3.color_code_chart(pred_universe)
     part3.plot_age_histogram(pred_universe)
     part3.age_histogram_with_bins(pred_universe)
 
-    ##  PART 4: CATEGORICAL PLOTS  ##
+    # ##  PART 4: CATEGORICAL PLOTS  ##
     part4.plot_charge_and_felony_prediction(merged_df)
     part4.plot_nonfelony_prediction(merged_df)
     part4.repeated_plot(merged_df)
 
     ##  PART 5: SCATTERPLOTS  ##
-    # 1
-    
-    # 2
-
+    part5.plot_scatter_predictions(merged_df)
+    part5.plot_actual_vs_predicted_rearrest(merged_df)
 
 if __name__ == "__main__":
     main()
