@@ -26,10 +26,10 @@ def main():
     part2.scatterplot(pred_universe)
 
     ##  PART 3: BAR PLOTS AND HISTOGRAMS  ##
-    # 1
-
-    # 2
-
+    part3.fta_bar_plot(pred_universe)
+    part3.color_code_chart(pred_universe)
+    part3.plot_age_histogram(pred_universe)
+    part3.age_histogram_with_bins(pred_universe)
     # 3
 
     # 4
